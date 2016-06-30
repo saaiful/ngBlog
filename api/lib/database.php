@@ -179,6 +179,7 @@ class DB
     {
         $query = "UPDATE {$this->table} SET ";
         $update = [];
+        $datas['updated_at'] = date("Y-m-d H:i:s");
         foreach ($datas as $key => $value) {
             $update[] = " {$key}=? ";
             $this->param[] = $value;
