@@ -1,0 +1,17 @@
+<div class="container animated fadeIn" ng-controller="PageCtrl">
+	<div class="row">
+		<div ng-if="!notFound" class="col-sm-12">
+			<div class=" z-depth-1 single-post">
+				<img ng-if="data.uri" ng-src="{{ data.uri }}" alt="{{ data.title }}">
+				<div class="title">{{ data.title }}</div>
+				<div class="details" dynamic="data.details"></div>
+			</div>
+		</div>
+
+		<div ng-if="data.type==1" class="col-sm-12">
+			<div class="z-depth-1 white-bg comments" disqus="''"></div>
+		</div>
+
+		<div ng-if="notFound" class="animated fadeIn" ng-include="error_404"></div>
+	</div>
+</div>

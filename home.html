@@ -1,0 +1,33 @@
+<div class="container home-page" ng-controller="HomeCtrl">
+	<div class="row">
+		<div class="col-sm-12 single-item" ng-repeat="data in datas">
+			<a href="{{ root }}#{{ data.slug }}">
+				<div class="cover-image z-depth-1">
+					<div style="background-image:url(assets/images/{{ data.uri }});">
+						<div class="title">{{ data.title }}</div>
+					</div>
+				</div>
+			</a>
+		</div>
+		
+		<div ng-if="totalItems==0" class="col-sm-12">
+			<div class="single-item z-depth-1 white-bg">
+				<div style="font-size:25px;color:black;text-align:center;padding:20px;">I'm lazy , please wait for new post.</div>
+			</div>
+		</div>
+
+		
+		<div ng-if="totalPages>1" class="col-sm-12 text-center" id="pagination">
+			<uib-pagination total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="getData()"></uib-pagination>
+		</div>
+
+
+		<script type="text/javascript">
+			//  $("#pagination").twbsPagination({
+			// 	totalPages: 35,
+			// 	visiblePages: 5,
+			// 	href: '?page={{number}}'
+			// });
+		</script>
+	</div>
+</div>
