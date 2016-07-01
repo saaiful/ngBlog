@@ -3,6 +3,7 @@
 				<a class="navbar-brand" href="index.php">ngBlog Admin</a>
 				<ul class="nav navbar-nav">
 					<li><a href="index.php">Dashboard</a></li>
+					<li><a href="menu.php">Menu</a></li>
 					<li class="dropdown">
 						<a href="" data-target="#" class="dropdown-toggle" data-toggle="dropdown">New
 						<b class="caret"></b></a>
