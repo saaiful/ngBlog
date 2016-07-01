@@ -10,6 +10,7 @@ if (isset($_POST['title'])) {
     $input = $_POST;
     $input['fimage'] = (!$input['fimage']) ? 0 : $input['fimage'];
     $input['user_id'] = $_SESSION['user']['id'];
+    $input['type'] = $_GET['type'];
     $input['details'] = preg_replace("/<script .*([a-z0-9]{20})\.js.*<\/script>/", '<gist id="$1"></gist>', $_POST['details']);
     $id = $data->insert($input);
     if (is_string($id)) {
