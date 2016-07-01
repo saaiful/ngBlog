@@ -17,3 +17,5 @@ Embed any github repositories / users card using `<gitcard source="username"></g
 
     <gitcard source="saaiful"></gitcard>
     <gitcard source="saaiful/ngBlog"></gitcard>
+
+Learn [more](https://github.com/lepture/github-cards) about github card.
