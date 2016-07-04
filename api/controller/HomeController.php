@@ -13,6 +13,7 @@ class HomeController extends Controller
         $db->table('posts')
            ->where("type", "=", 1)
            ->leftjoin('images', 'fimage', 'id')
+           ->orderBy('posts.id', 'desc')
            ->pagination(10);
         return $this->json($db->get(['posts.title', 'images.uri', 'posts.slug']));
     }
