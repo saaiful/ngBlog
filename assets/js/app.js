@@ -67,7 +67,7 @@ app.controller("MainCtrl", function($scope, $http, $location, $compile) {
 				}
 				if (len > 3) {
 					document.html += '<li class="dropdown">';
-					document.html += '<a href="javascript:{};" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Apps';
+					document.html += '<a href="javascript:{};" data-target="#" class="dropdown-toggle" data-toggle="dropdown">'+value.name;
 					document.html += '<b class="caret"></b></a>';
 					document.html += '<ul class="dropdown-menu">';
 					$.each(value.children, function(a, b) {
